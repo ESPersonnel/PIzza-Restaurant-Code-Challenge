@@ -9,7 +9,7 @@ class RestaurantsController < ApplicationController
 
     def show
         restaurant = find_restaurant
-        render json: restaurant, status: :ok
+        render json: restaurant, status: :ok, serializer: RestaurantSerializer
     end
 
     def create
